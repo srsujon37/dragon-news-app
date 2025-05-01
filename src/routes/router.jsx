@@ -1,12 +1,24 @@
 import { createBrowserRouter } from "react-router";
 import HomeLayouts from "../layouts/HomeLayouts";
+import Home from "../pages/Home";
+import CategoryNews from "../pages/CategoryNews";
 
 const router = createBrowserRouter(
     [
     
         {
             path: "/",
-            element: <HomeLayouts></HomeLayouts>
+            element: <HomeLayouts></HomeLayouts>,
+            children:[
+                {
+                    path:"",
+                    element: <Home></Home>
+                },
+                {
+                    path:"/category/:id",
+                    element: <CategoryNews></CategoryNews>
+                },
+            ],
         },
         {
             path: "/auth",
