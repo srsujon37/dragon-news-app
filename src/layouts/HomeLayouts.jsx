@@ -7,6 +7,7 @@ import LeftAside from '../Component/homelayout/LeftAside';
 import RightAside from '../Component/homelayout/RightAside';
 
 const HomeLayouts = () => {
+    
     return (
         <div className='container mx-auto'>
             <header>
