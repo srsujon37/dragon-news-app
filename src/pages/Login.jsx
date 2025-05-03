@@ -6,17 +6,17 @@ const Login = () => {
     const [error, setError] = useState("")
     const { signIn } =use(AuthContext)
     const location = useLocation();
-    console.log(location);
+    // console.log(location);
     const handleLogin = (e) =>{
         e.preventDefault(e.target);
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log({email,password});
+        // console.log({email,password});
         signIn()
         .then((result)=>{
             const user = result.user;
-            console.log(user);
+            // console.log(user);
             Navigate(`${location.state? location.state : "/"}`)
         })
         .catch((error)=>{

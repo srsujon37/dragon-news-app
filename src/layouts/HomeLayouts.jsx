@@ -13,6 +13,7 @@ const HomeLayouts = () => {
         <div className='container mx-auto'>
             <header>
                 <Header></Header>
+                {import.meta.env.VITE_name}
                 <section>
                     <LatestNews></LatestNews>
                 </section>
